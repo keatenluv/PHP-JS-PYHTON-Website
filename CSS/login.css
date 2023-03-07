@@ -1,0 +1,46 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(173, 173, 173);
+    /*background-image: url("../res/lex");*/
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+}
+
+form {
+    background-color: hex(CEC4C2);
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.section {
+    text-align: center;
+    padding: 10px;
+    width: 60%;
+}
+
+.login-form input {
+    text-align: center;
+}
+
+.buttons {
+    background-color: rgb(137, 49, 1);
+    border: none;
+}
+
+.login-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

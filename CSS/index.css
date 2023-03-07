@@ -7,3 +7,13 @@
 a {
     text-decoration: none;
 }
+
+button {
+    margin: auto;
+    text-align: center;
+}
+
+button:hover{
+    cursor: pointer;
+}
+

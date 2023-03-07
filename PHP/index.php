@@ -8,19 +8,23 @@
 
 <!--  Navigation  -->
 <div class="topnav">
-    <nav class="w3-bar w3-black center">
-        <a class="center"href="#home" class="w3-button w3-bar-item">Home</a>
-        <a class="center"href="#" class="w3-button w3-bar-item">Band</a>
-        <a class="center"href="#tour" class="w3-button w3-bar-item">Tour</a>
-        <a class="center"href="test.php" class="w3-button w3-bar-item">About</a>
+    <nav class="w3-bar w3-black">
+        <div class="center">
+            <a class="center"href="#home" class="w3-button w3-bar-item">Home</a>
+            <a class="center"href="#" class="w3-button w3-bar-item">Band</a>
+            <a class="center"href="#tour" class="w3-button w3-bar-item">Tour</a>
+            <a class="center"href="test.php" class="w3-button w3-bar-item">About</a>
+        </div>
+        <div><a>Logout</a></div>
     </nav>
 </div>
 
-<head>
-
-    
-    
+<head>    
 </head>
+
+<body>
+    <button type="button" onclick="alert('welcome')" name="help">Help</button>
+</body>
 
 
 </html>
