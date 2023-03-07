@@ -9,10 +9,10 @@
 <!--  Navigation  -->
 <div class="topnav">
     <nav class="w3-bar w3-black center">
-        <a class="center"href="#" class="w3-button w3-bar-item">Home</a>
-        <a class="center"href="#band" class="w3-button w3-bar-item">Band</a>
+        <a class="center"href="#home" class="w3-button w3-bar-item">Home</a>
+        <a class="center"href="#" class="w3-button w3-bar-item">Band</a>
         <a class="center"href="#tour" class="w3-button w3-bar-item">Tour</a>
-        <a class="center"href="#contact" class="w3-button w3-bar-item">Contact</a>
+        <a class="center"href="test.php" class="w3-button w3-bar-item">About</a>
     </nav>
 </div>
 
