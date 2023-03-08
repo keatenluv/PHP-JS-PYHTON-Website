@@ -30,24 +30,23 @@
                 </div>
                 <div class="form-group section">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="pass" class="form-control" name="pass" placeholder="Password">
                 </div>
                 <div>
-                    <a href="index.php"><button name="btn" type="submit" class="btn btn-dark buttons">Login</button></a>
-                    <button name="btn" type="submit" class="btn btn-dark buttons">Register</button>
+                    <button name="btn" type="submit" class="btn btn-dark buttons">Login</button>
                 </div>
                 <div id="alert" class="alert alert-danger" role="alert"></div>
                 <script>
                     var cookies = document.cookie.split(";").
                     map(function(el){ return el.split("="); }).
                     reduce(function(prev,cur){ prev[cur[0]] = cur[1]; return prev },{});
-                    alert(cookies["userName"]);
-                    if (checkCookie('userName') == null){
-                        alert("Helo");
-                        const fail = document.getElementById("alert");
-                        fail.innerHTML = "Username does not exist";
-                        fail.style.display = "block";
-                    }   
+                    alert(cookies["Username"]);
+                    // if (typeof(cookies["Username"]) != "undefined"){
+                    //     alert("Helo");
+                    //     const fail = document.getElementById("alert");
+                    //     fail.innerHTML = "Username does not exist";
+                    //     fail.style.display = "block";
+                    // }   
                 </script>
                 </div>
             </form>

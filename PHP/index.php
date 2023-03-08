@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 
-<?php 
 
-if(!isset($_SESSION['userName'])){
-    header('Location: login.php');
-    exit();
-}
-?>
+
 
 
 
@@ -20,7 +15,7 @@ if(!isset($_SESSION['userName'])){
 <!--  Navigation  -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light nav">
   <div class="container-fluid">
-    <a class="a" href="#you-should-hire-me.php">Welcome <?php echo $_SESSION["userName"]; ?></a>
+    <a class="a" href="#you-should-hire-me.php">Welcome <?php //echo $_SESSION["userName"]; ?></a>
     <div class="justify-content-center" id="navbarNav">
         <a class="a" href="#you-should-hire-me.php">Why Me?</a>
       
@@ -36,12 +31,7 @@ if(!isset($_SESSION['userName'])){
 </head>
 
 <body>
-    <button type="button" onclick="alert('welcome')" name="help">Help</button>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-  Select image to upload:
-  <input type="file" name="fileToUpload" id="fileToUpload">
-  <input type="submit" value="Upload Image" name="submit">
-</form>
+
 </body>
 
 
