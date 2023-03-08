@@ -27,7 +27,6 @@ setcookie("Username", $row["Username"]);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
-      
       header('Location: http://localhost:3000/PHP/index.php');
       exit();
 } else {
