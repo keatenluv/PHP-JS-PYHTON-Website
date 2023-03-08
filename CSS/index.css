@@ -4,8 +4,13 @@
     text-align: center;
 }
 
-a {
+.a {
+    color: black;
     text-decoration: none;
+}
+
+.nav {
+    height: 7.5vh;
 }
 
 button {
