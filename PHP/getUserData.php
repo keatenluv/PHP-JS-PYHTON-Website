@@ -1,8 +1,5 @@
 <?php 
-
 session_start();
-
-
 
 if (isset($_POST["Username"]) && isset($_POST["pass"])) {
   $username = $_POST["Username"];
@@ -34,7 +31,6 @@ if (isset($_POST["Username"]) && isset($_POST["pass"])) {
   } else {
     echo "Valid Input";
   }
-
 
   // User with login info is found
   if (!is_null($row)){

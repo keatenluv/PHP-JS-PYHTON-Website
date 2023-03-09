@@ -26,6 +26,7 @@
     <div class="justify-content-end">
         <a class="a" href="login.php">Logout</a>
     </div>
+    
   </div>
 </nav>
 

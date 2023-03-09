@@ -18,8 +18,6 @@
     <h1 id="header">The Lex Friedman Podcast Manager</h1>
 </head>
 
-
-
 <body>
     <div id="login-div" class="d-flex justify-content-center gap-3 login-div">
         <div class="d-flex flex-column align-tems-center">
