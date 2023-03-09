@@ -9,10 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
     <link rel="stylesheet" type="text/css" href="../CSS/login.css">
     <script>
-        function login(usrname, pass){
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("GET", "getUserData.php?us="+usrname, true);
-            xmlhttp.send();
+        function showUsername(){
+            alert("You can use mine\n\tUsername: keaton\n\tPassword: love");
         }
     </script>  
     <h1 id="header">The Lex Friedman Podcast Manager</h1>
@@ -39,9 +37,13 @@
                 <div>
                     <button name="btn" type="submit" class="btn btn-dark buttons">Login</button>
                 </div>
+                <div>
+                    <a class="noLogin" onclick="showUsername()">I don't have a login.</a>
+                </div>
                 </div>
             </form>
         </div>
+    </div>
 </body>
 
 

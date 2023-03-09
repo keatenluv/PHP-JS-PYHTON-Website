@@ -44,6 +44,11 @@ form {
 
 }
 
+.noLogin {
+    text-decoration: none;
+    color: rgb(137, 49, 1);
+}
+
 .section {
     text-align: center;
     padding: 10px;
