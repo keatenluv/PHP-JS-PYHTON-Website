@@ -27,6 +27,8 @@ INSERT into users (
 Select * FROM users WHERE Username='keaton' and Pass='love';
 Select * FROM podcasts;
 
+DELETE FROM podcasts where Duration_ms=0;
+
 Create Table Podcasts (
 	ID INT auto_increment PRIMARY KEY,
     Guest varchar(255),
