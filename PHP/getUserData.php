@@ -42,32 +42,10 @@ if (isset($_POST["Username"]) && isset($_POST["pass"])) {
   }
   // User is not found
   else {
-    header('Location: login.php');
+    header('Location: login.php?error= User Not Found');
   }
 
 } else {
 
 }
-
-
-
-
-
-// if (mysqli_num_rows($result) > 0) {
-//   // output data of each row
-
-//       header('Location: http://localhost:3000/PHP/index.php');
-//       exit();
-// } else {
-//       header('Location: login.php');
-//       echo "<p>Incorrect email or password.</p>";
-// }
-
-// if (mysqli_num_rows($result) == 1){
-//     $_SESSION['userName'] = $username;
-//     header('Location: index.php');
-// } else {
-//     
-// }
-
 ?>
