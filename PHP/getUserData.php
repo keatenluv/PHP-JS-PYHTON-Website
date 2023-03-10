@@ -18,9 +18,10 @@ if (isset($_POST["Username"]) && isset($_POST["pass"])) {
   }
 
   $sql = "SELECT * FROM users WHERE Username='$username' AND Pass='$pass'";
+  try {
   $result = $conn->query($sql);
-
-  $row = mysqli_fetch_assoc($result);
+  $row= mysqli_fetch_assoc($result);
+} catch(Exception $e) { header("Location: login.php");}
 
   if (empty($username)) {
     header("Location: login.php?error=Username required");

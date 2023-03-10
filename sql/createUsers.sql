@@ -26,7 +26,8 @@ INSERT into users (
 
 Select * FROM users WHERE Username='keaton' and Pass='love';
 Select * FROM podcasts;
-
+UPDATE Podcasts SET Guest='Joscha Bach', Title='Artificial Consciousness and the Nature of Reality', Releasedate='2020/06/13', DurationMins=181 WHERE ID=101;
+DELETE FROM Podcasts WHERE Guest='Joscha Bach';
 DELETE FROM podcasts where Duration_ms=0;
 
 Create Table Podcasts (
@@ -57,3 +58,6 @@ DELETE FROM Podcasts WHERE DurationMins=0;
 UPDATE Podcasts SET Guest='Joscha Bach',Title='Artificial Consciousness and the Nature of Reality',date='2020/06/13',DurationMins=181 WHERE ID=101;
 
 UPDATE Podcasts SET Title='The War of Art' WHERE ID=102;
+UPDATE Podcasts SET Title='Physics of Consciousness and the Infinite Universe' WHERE ID=85;
+UPDATE Podcasts SET Guest='Joscha Bach',Title='Artificial Consciousness and the Nature of Reality',Releasedate='2020-06-13',DurationMins=181 WHERE ID=101;
+ UPDATE Podcasts SET Guest='',Title='',Releasedate='2020-06-13',DurationMins=0 WHERE ID=100;

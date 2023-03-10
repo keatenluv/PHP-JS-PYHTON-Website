@@ -36,7 +36,7 @@ p {
     margin-top: 20px;
 }
 
-.description {
+ .description {
     padding-left: 30px;
     padding-right:30%;
 }
@@ -45,3 +45,10 @@ p {
     padding-top: 20px;;
 }
 
+ .hobbies {
+    text-align: center;
+} 
+.hobbies p{
+    text-align: center;
+    margin-left: -38%;
+} 
