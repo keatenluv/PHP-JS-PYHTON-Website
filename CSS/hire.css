@@ -1,0 +1,47 @@
+img {
+    vertical-align: bottom;
+    float: left;
+    margin-left: 30%;
+  }
+  
+h3 {
+    margin-left: 30%;
+}
+
+h5 {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+p {
+      display:inline-block;
+      padding: 1px;
+}
+
+#keaton {
+    text-align: center;
+}
+
+#about{
+    margin-top: 10px;
+}
+
+#accomplishments {
+    padding-top: 10px;
+    padding-left: 100px;
+}
+
+#why {
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.description {
+    padding-left: 30px;
+    padding-right:30%;
+}
+
+.reasons {
+    padding-top: 20px;;
+}
+

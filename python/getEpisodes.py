@@ -21,9 +21,9 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 mycursor.execute("Drop Table if Exists podcasts")
-mycursor.execute("Create Table Podcasts ( ID INT auto_increment PRIMARY KEY, Guest varchar(255), Title varchar(255), Releasedate datetime, Duration_ms int, Notes varchar(255))")
+mycursor.execute("Create Table Podcasts ( ID INT auto_increment PRIMARY KEY, Guest varchar(255), Title varchar(255), Releasedate date, DurationMins int)")
 #mycursor.execute("SELECT * FROM PODCASTS")
-sql = "INSERT INTO Podcasts (Guest, Title, Releasedate, Duration_ms, Notes) VALUES (%s, %s, %s, %s, %s)"
+sql = "INSERT INTO Podcasts (Guest, Title, Releasedate, DurationMins) VALUES (%s, %s, %s, %s)"
 
 
 # Set up logger
@@ -39,7 +39,6 @@ episode = sp.show_episodes("https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL
 items = episode["items"]
 
 pattern = re.compile(r"\B#([A-Za-z0-9]{2,})(?![~!@#$%^&*()=+_`\-\|\/'\[\]\{\}]|[?.,]*\w)", re.IGNORECASE)
-sql = "INSERT INTO Podcasts (Guest, Title, Releasedate, Duration_ms, Notes) VALUES (%s, %s, %s, %s, %s)"
 n = episode['total']
 idx = 1
 # logic bad, outcome good
@@ -53,26 +52,24 @@ while (n > 0):
     if ("Lex" in split[0] or "New Name" in split[0]):
         print("Exclusion")
     else:
+        durationMin = ((items[0]['duration_ms']/1000)/60)
         if (epNum is not None):
             remove = epNum.group() + " – "
             removeNum = re.sub(remove, "", title)
             split = removeNum.split(": ")
             epNum = epNum.group().replace('#','')
 
-            # print("Episode Number: " , epNum)
-            # print("Guest: "+ split[0])
 
-    
         if (idx == 100 or idx == 84):
-            values = [('', '', '2010/11/11', 0, ''),(split[0], "", items[0]['release_date'], items[0]['duration_ms'], '')]
+            values = [('', '', '2010/11/11', 0),(split[0], "", items[0]['release_date'], durationMin)]
             mycursor.executemany(sql, values)
             mydb.commit()
         elif (len(split) > 1):
-            values = (split[0], split[1], items[0]['release_date'], items[0]['duration_ms'], '')
+            values = (split[0], split[1], items[0]['release_date'], durationMin)
             mycursor.execute(sql, values)
             mydb.commit()
         else:
-            values = (split[0], "", items[0]['release_date'], items[0]['duration_ms'], '')
+            values = (split[0], "", items[0]['release_date'], durationMin)
             mycursor.execute(sql, values)
             mydb.commit()
     #         # print("Episode Title: "+split[1])

@@ -51,3 +51,9 @@ INSERT into Podcasts (
      420,
      "This is a note"
 );
+
+DELETE FROM Podcasts WHERE DurationMins=0;
+
+UPDATE Podcasts SET Guest='Joscha Bach',Title='Artificial Consciousness and the Nature of Reality',date='2020/06/13',DurationMins=181 WHERE ID=101;
+
+UPDATE Podcasts SET Title='The War of Art' WHERE ID=102;
