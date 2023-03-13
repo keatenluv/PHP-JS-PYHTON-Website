@@ -5,11 +5,7 @@ import logging as log
 import mysql.connector
 import re
 
-''' 
-export SPOTIPY_CLIENT_ID='4ac12ac853dd4b14b364313a8a6453e1'
-export SPOTIPY_CLIENT_SECRET='8ac2f72c761a4c039d4e4c4710c57b46'
-export SPOTIPY_REDIRECT_URI='https://localhost:8084/callback'
-'''
+
 
 mydb = mysql.connector.connect(
     user="root",
